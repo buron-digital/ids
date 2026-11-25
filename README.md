@@ -370,6 +370,6 @@ When your application already uses a wrapper class of its own, let it extend `Id
 
 ## Who's behind this
 
-<a href="https://www.buron.digital"><img src="https://raw.githubusercontent.com/buron-digital/ids/rename-namespace/.github/assets/buron-digital-banner.png" alt="Christian Kolb, Buron Digital – Building your digital products. Free initial consultation." width="100%"></a>
+<a href="https://www.buron.digital"><img src="https://raw.githubusercontent.com/buron-digital/ids/main/.github/assets/buron-digital-banner.png" alt="Christian Kolb, Buron Digital – Building your digital products. Free initial consultation." width="100%"></a>
 
 <p align="center"><sub><a href="https://www.buron.digital">www.buron.digital</a> · <a href="mailto:info@buron.digital">info@buron.digital</a></sub></p>
