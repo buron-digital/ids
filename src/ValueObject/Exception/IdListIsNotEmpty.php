@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace DigitalCraftsman\Ids\ValueObject\Exception;
+namespace BuronDigital\Ids\ValueObject\Exception;
 
 /**
  * @psalm-immutable

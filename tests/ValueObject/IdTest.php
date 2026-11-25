@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace DigitalCraftsman\Ids\ValueObject;
+namespace BuronDigital\Ids\ValueObject;
 
-use DigitalCraftsman\Ids\Test\Exception\NotTheSameUser;
-use DigitalCraftsman\Ids\Test\Exception\SameUser;
-use DigitalCraftsman\Ids\Test\ValueObject\UserId;
+use BuronDigital\Ids\Test\Exception\NotTheSameUser;
+use BuronDigital\Ids\Test\Exception\SameUser;
+use BuronDigital\Ids\Test\ValueObject\UserId;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\DoesNotPerformAssertions;
 use PHPUnit\Framework\Attributes\Test;

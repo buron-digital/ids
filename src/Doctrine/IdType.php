@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace DigitalCraftsman\Ids\Doctrine;
+namespace BuronDigital\Ids\Doctrine;
 
-use DigitalCraftsman\SelfAwareNormalizers\Doctrine\StringNormalizableType;
+use BuronDigital\SelfAwareNormalizers\Doctrine\StringNormalizableType;
 use Doctrine\DBAL\Platforms\AbstractPlatform;
 
 /**

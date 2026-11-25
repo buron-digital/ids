@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace DigitalCraftsman\Ids\Test\Doctrine;
+namespace BuronDigital\Ids\Test\Doctrine;
 
-use DigitalCraftsman\Ids\Doctrine\IdType;
-use DigitalCraftsman\Ids\Test\ValueObject\UserId;
+use BuronDigital\Ids\Doctrine\IdType;
+use BuronDigital\Ids\Test\ValueObject\UserId;
 
 final class UserIdType extends IdType
 {

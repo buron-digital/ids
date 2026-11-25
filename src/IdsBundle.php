@@ -1,6 +1,6 @@
 <?php
 
-namespace DigitalCraftsman\Ids;
+namespace BuronDigital\Ids;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

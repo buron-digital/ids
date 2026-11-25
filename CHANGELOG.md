@@ -1,5 +1,10 @@
 # Changelog
 
+## 3.0.0
+
+- **[Breaking change](./UPGRADE.md#renamed-package-and-namespace)**: Renamed the package from `digital-craftsman/ids` to `buron-digital/ids` and the namespace from `DigitalCraftsman\Ids` to `BuronDigital\Ids`. Apart from the names, nothing changed.
+- Switched the dependency `digital-craftsman/self-aware-normalizers` to `buron-digital/self-aware-normalizers` (`^2.0.0`).
+
 ## 2.6.0
 
 - Added `IdListAwareConnection`, a wrapper class for the DBAL connection that allows to pass id lists directly as query parameters, without `idsAsStringList()` and without `ArrayParameterType::STRING`. See [Query parameters](./README.md#query-parameters).
