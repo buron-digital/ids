@@ -1,5 +1,43 @@
 # Upgrade guide
 
+## From 2.6.* to 3.0.0
+
+### Renamed package and namespace
+
+The package moved from `digital-craftsman/ids` to `buron-digital/ids` and the namespace from `DigitalCraftsman\Ids` to `BuronDigital\Ids`. Apart from the names, nothing changed, so the upgrade is a plain search and replace.
+
+This version depends on `buron-digital/self-aware-normalizers` instead of `digital-craftsman/self-aware-normalizers`. Switch it in the same step (see its upgrade guide) and replace its namespace as well.
+
+1. Replace the package in your `composer.json`.
+
+   Before:
+   ```json
+   "digital-craftsman/ids": "^2.6"
+   ```
+
+   After:
+   ```json
+   "buron-digital/ids": "^3.0.0"
+   ```
+
+2. Replace the namespace in your whole project – not only in `src` and `tests`, but also in `config` (e.g. `config/bundles.php` and service or Doctrine configuration), migrations, templates and all other files that contain class names. Search for `DigitalCraftsman\Ids\` and replace it with `BuronDigital\Ids\` (e.g. with "Replace in Files" of your IDE) or run the following command in the root of your project. It also covers escaped class names like `'DigitalCraftsman\\Ids\\…'` in strings:
+
+   ```shell
+   grep -rlE 'DigitalCraftsman\\+Ids' --exclude-dir=vendor --exclude-dir=var --exclude-dir=node_modules --exclude-dir=.git . \
+     | xargs perl -pi -e 's/DigitalCraftsman(\\+)Ids/BuronDigital$1Ids/g'
+   ```
+
+   When you switch all packages (`self-aware-normalizers`, `ids`, `date-time-precision`, `deserializing-connection`, `cqs-routing`) at once, you can replace `DigitalCraftsman` with `BuronDigital` instead.
+
+3. Update the packages and clear the cache:
+
+   ```shell
+   composer update "buron-digital/*"
+   bin/console cache:clear
+   ```
+
+4. Check where class names are stored outside of your code. For example, PHP-serialized messages in Symfony Messenger queues or objects in persistent cache pools still contain the previous class names. Let the queues run empty and clear those pools when deploying the change.
+
 ## From 2.5.* to 2.6.0
 
 Nothing to do. To pass id lists directly as query parameters, register the new `IdListAwareConnection` as wrapper class of the DBAL connection (see [Query parameters](./README.md#query-parameters)).

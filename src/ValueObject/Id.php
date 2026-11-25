@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace DigitalCraftsman\Ids\ValueObject;
+namespace BuronDigital\Ids\ValueObject;
 
-use DigitalCraftsman\SelfAwareNormalizers\Doctrine\NormalizableTypeWithSQLDeclaration;
-use DigitalCraftsman\SelfAwareNormalizers\Serializer\NullableStringDenormalizable;
-use DigitalCraftsman\SelfAwareNormalizers\Serializer\NullableStringDenormalizableTrait;
-use DigitalCraftsman\SelfAwareNormalizers\Serializer\StringNormalizable;
+use BuronDigital\SelfAwareNormalizers\Doctrine\NormalizableTypeWithSQLDeclaration;
+use BuronDigital\SelfAwareNormalizers\Serializer\NullableStringDenormalizable;
+use BuronDigital\SelfAwareNormalizers\Serializer\NullableStringDenormalizableTrait;
+use BuronDigital\SelfAwareNormalizers\Serializer\StringNormalizable;
 use Doctrine\DBAL\Platforms\AbstractPlatform;
 
 abstract readonly class Id implements \Stringable, StringNormalizable, NullableStringDenormalizable, NormalizableTypeWithSQLDeclaration

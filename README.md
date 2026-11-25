@@ -4,11 +4,17 @@ Stop passing ids around as plain strings. This bundle lets you create a dedicate
 
 As it's a central part of an application, it's tested thoroughly (including mutation testing).
 
-[![Latest Stable Version](https://img.shields.io/badge/stable-2.6.0-blue)](https://packagist.org/packages/digital-craftsman/ids)
-[![PHP Version Require](https://img.shields.io/badge/php-8.5|8.6-5b5d95)](https://packagist.org/packages/digital-craftsman/ids)
-[![codecov](https://codecov.io/gh/digital-craftsman-de/ids/branch/main/graph/badge.svg?token=BL0JKZYLBG)](https://codecov.io/gh/digital-craftsman-de/ids)
-![Packagist Downloads](https://img.shields.io/packagist/dt/digital-craftsman/ids)
-![Packagist License](https://img.shields.io/packagist/l/digital-craftsman/ids)
+[![Latest Stable Version](https://img.shields.io/badge/stable-3.0.0-blue)](https://packagist.org/packages/buron-digital/ids)
+[![PHP Version Require](https://img.shields.io/badge/php-8.5|8.6-5b5d95)](https://packagist.org/packages/buron-digital/ids)
+[![codecov](https://codecov.io/gh/buron-digital/ids/branch/main/graph/badge.svg?token=BL0JKZYLBG)](https://codecov.io/gh/buron-digital/ids)
+![Packagist Downloads](https://img.shields.io/packagist/dt/buron-digital/ids)
+![Packagist License](https://img.shields.io/packagist/l/buron-digital/ids)
+
+> [!NOTE]
+> Up to version 2.6.0, the package was published as [`digital-craftsman/ids`](https://packagist.org/packages/digital-craftsman/ids) with the namespace `DigitalCraftsman\Ids`. See the [upgrade guide](./UPGRADE.md#renamed-package-and-namespace) for how to switch.
+>
+> Downloads under the old name:\
+> [![Packagist Downloads](https://img.shields.io/packagist/dt/digital-craftsman/ids)](https://packagist.org/packages/digital-craftsman/ids)
 
 ## Why?
 
@@ -37,7 +43,7 @@ On top of that, you get:
 - **Serializer support:** Ids are normalized to strings and id lists to arrays of strings – without writing a single normalizer.
 - **Doctrine support:** Ids and id lists can be used directly as column types – without writing a single Doctrine type.
 
-The serializer and Doctrine integration is provided by [`digital-craftsman/self-aware-normalizers`](https://github.com/digital-craftsman-de/self-aware-normalizers), which is installed as a dependency.
+The serializer and Doctrine integration is provided by [`buron-digital/self-aware-normalizers`](https://github.com/buron-digital/self-aware-normalizers), which is installed as a dependency.
 
 ### Why not `ramsey/uuid` or `symfony/uid`?
 
@@ -54,7 +60,7 @@ You can still use `symfony/uid` or `ramsey/uuid` just to *generate* other UUID v
 Requires PHP 8.5 or 8.6, Symfony 7.4 or 8 and Doctrine DBAL 4.
 
 ```shell
-composer require digital-craftsman/ids
+composer require buron-digital/ids
 ```
 
 It's recommended to install the [`uuid` PHP extension](https://pecl.php.net/package/uuid) for better performance of id creation and validation. `symfony/polyfill-uuid` is used as a fallback. When the extension is installed, you can [prevent installing the polyfill](./docs/prevent-polyfill-usage.md).
@@ -94,7 +100,7 @@ declare(strict_types=1);
 
 namespace App\ValueObject;
 
-use DigitalCraftsman\Ids\ValueObject\Id;
+use BuronDigital\Ids\ValueObject\Id;
 
 final readonly class UserId extends Id
 {
@@ -161,7 +167,7 @@ $serializer->serialize($userPayload, JsonEncoder::FORMAT);
 }
 ```
 
-Denormalization works the same way in reverse. This also makes ids usable in commands and queries of the [CQS routing bundle](https://github.com/digital-craftsman-de/cqs-routing).
+Denormalization works the same way in reverse. This also makes ids usable in commands and queries of the [CQS routing bundle](https://github.com/buron-digital/cqs-routing).
 
 ### Doctrine
 
@@ -191,7 +197,7 @@ declare(strict_types=1);
 
 namespace App\ValueObject;
 
-use DigitalCraftsman\Ids\ValueObject\IdList;
+use BuronDigital\Ids\ValueObject\IdList;
 
 /** @extends IdList<UserId> */
 final readonly class UserIdList extends IdList
@@ -315,7 +321,7 @@ To pass id lists directly as well (e.g. for `IN (:userIds)`), register `IdListAw
 ```yaml
 doctrine:
   dbal:
-    wrapper_class: DigitalCraftsman\Ids\Doctrine\IdListAwareConnection
+    wrapper_class: BuronDigital\Ids\Doctrine\IdListAwareConnection
 ```
 
 Doctrine then creates the connection as `IdListAwareConnection`. As it extends `Connection`, nothing else needs to change: every service that injects `Doctrine\DBAL\Connection` and every `$entityManager->getConnection()` already gets it. Only connections that are created outside of the Doctrine configuration (e.g. with `DriverManager::getConnection()`) need the `wrapperClass` parameter themselves.
@@ -361,3 +367,9 @@ When your application already uses a wrapper class of its own, let it extend `Id
 - [Use other UUID versions](./docs/use-other-uuid-versions.md)
 - [Changelog](./CHANGELOG.md)
 - [Upgrade guide](./UPGRADE.md)
+
+## Who's behind this
+
+<a href="https://www.buron.digital"><img src="https://raw.githubusercontent.com/buron-digital/ids/rename-namespace/.github/assets/buron-digital-banner.png" alt="Christian Kolb, Buron Digital – Building your digital products. Free initial consultation." width="100%"></a>
+
+<p align="center"><sub><a href="https://www.buron.digital">www.buron.digital</a> · <a href="mailto:info@buron.digital">info@buron.digital</a></sub></p>

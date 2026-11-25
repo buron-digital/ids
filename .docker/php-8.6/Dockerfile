@@ -1,8 +1,7 @@
 # Build with
-# docker buildx build --platform linux/arm64,linux/amd64 -t ghcr.io/digital-craftsman-de/ids-php-8.6:latest ./.docker/php-8.6 --push
+# docker buildx build --platform linux/arm64,linux/amd64 -t ghcr.io/buron-digital/ids-php-8.6:latest ./.docker/php-8.6 --push
 
-# TODO: Switch to php:8.6-fpm-alpine once PHP 8.6 is released.
-FROM php:8.6-rc-fpm-alpine
+FROM php:8.6-fpm-alpine
 
 RUN apk add --update \
     autoconf \

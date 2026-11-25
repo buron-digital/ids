@@ -2,21 +2,21 @@
 
 declare(strict_types=1);
 
-namespace DigitalCraftsman\Ids\ValueObject;
+namespace BuronDigital\Ids\ValueObject;
 
-use DigitalCraftsman\Ids\Test\Exception\AllUsersMustBeAbleToPerformAction;
-use DigitalCraftsman\Ids\Test\Exception\ListOfUsersHasNotChanged;
-use DigitalCraftsman\Ids\Test\Exception\NotAllUsersAreDisabled;
-use DigitalCraftsman\Ids\Test\Exception\NotAllUsersAreEnabled;
-use DigitalCraftsman\Ids\Test\Exception\NoUserCanPerformAction;
-use DigitalCraftsman\Ids\Test\Exception\SomeUsersAreAlreadyEnabled;
-use DigitalCraftsman\Ids\Test\Exception\ThereAreStillUsersWithIssues;
-use DigitalCraftsman\Ids\Test\Exception\ThereMustBeAtLeastOneUserWithAccess;
-use DigitalCraftsman\Ids\Test\Exception\UserIsDisabled;
-use DigitalCraftsman\Ids\Test\Exception\UserIsNotEnabled;
-use DigitalCraftsman\Ids\Test\ValueObject\ProjectId;
-use DigitalCraftsman\Ids\Test\ValueObject\UserId;
-use DigitalCraftsman\Ids\Test\ValueObject\UserIdList;
+use BuronDigital\Ids\Test\Exception\AllUsersMustBeAbleToPerformAction;
+use BuronDigital\Ids\Test\Exception\ListOfUsersHasNotChanged;
+use BuronDigital\Ids\Test\Exception\NotAllUsersAreDisabled;
+use BuronDigital\Ids\Test\Exception\NotAllUsersAreEnabled;
+use BuronDigital\Ids\Test\Exception\NoUserCanPerformAction;
+use BuronDigital\Ids\Test\Exception\SomeUsersAreAlreadyEnabled;
+use BuronDigital\Ids\Test\Exception\ThereAreStillUsersWithIssues;
+use BuronDigital\Ids\Test\Exception\ThereMustBeAtLeastOneUserWithAccess;
+use BuronDigital\Ids\Test\Exception\UserIsDisabled;
+use BuronDigital\Ids\Test\Exception\UserIsNotEnabled;
+use BuronDigital\Ids\Test\ValueObject\ProjectId;
+use BuronDigital\Ids\Test\ValueObject\UserId;
+use BuronDigital\Ids\Test\ValueObject\UserIdList;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\DoesNotPerformAssertions;
 use PHPUnit\Framework\Attributes\Test;

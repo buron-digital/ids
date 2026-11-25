@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace DigitalCraftsman\Ids\Test\Doctrine;
+namespace BuronDigital\Ids\Test\Doctrine;
 
-use DigitalCraftsman\Ids\Test\ValueObject\UserIdList;
-use DigitalCraftsman\SelfAwareNormalizers\Doctrine\ArrayNormalizableType;
+use BuronDigital\Ids\Test\ValueObject\UserIdList;
+use BuronDigital\SelfAwareNormalizers\Doctrine\ArrayNormalizableType;
 
 final class UserIdListType extends ArrayNormalizableType
 {

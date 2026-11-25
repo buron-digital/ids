@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace DigitalCraftsman\Ids\Doctrine;
+namespace BuronDigital\Ids\Doctrine;
 
-use DigitalCraftsman\Ids\ValueObject\IdList;
+use BuronDigital\Ids\ValueObject\IdList;
 use Doctrine\DBAL\ArrayParameterType;
 use Doctrine\DBAL\Cache\QueryCacheProfile;
 use Doctrine\DBAL\Connection;

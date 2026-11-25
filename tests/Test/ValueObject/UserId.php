@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace DigitalCraftsman\Ids\Test\ValueObject;
+namespace BuronDigital\Ids\Test\ValueObject;
 
-use DigitalCraftsman\Ids\ValueObject\Id;
+use BuronDigital\Ids\ValueObject\Id;
 
 final readonly class UserId extends Id
 {

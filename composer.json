@@ -1,10 +1,10 @@
 {
-  "name": "digital-craftsman/ids",
+  "name": "buron-digital/ids",
   "description": "Working with value objects for ids in Symfony",
   "type": "symfony-bundle",
   "require": {
     "php": "8.5.*|8.6.*",
-    "digital-craftsman/self-aware-normalizers": "^1.4.0",
+    "buron-digital/self-aware-normalizers": "^2.0.0",
     "doctrine/dbal": "^4.5.0",
     "symfony/framework-bundle": "^7.4|^8.0",
     "symfony/polyfill-uuid": "^1.31",
@@ -22,19 +22,19 @@
   },
   "autoload": {
     "psr-4": {
-      "DigitalCraftsman\\Ids\\": "src/"
+      "BuronDigital\\Ids\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "DigitalCraftsman\\Ids\\": "tests/"
+      "BuronDigital\\Ids\\": "tests/"
     }
   },
   "license": "MIT",
   "authors": [
     {
       "name": "Christian Kolb",
-      "email": "info@digital-craftsman.de"
+      "email": "info@buron.digital"
     }
   ],
   "config": {

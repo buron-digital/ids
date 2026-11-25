@@ -9,12 +9,12 @@
     "@default": true,
     "IncrementInteger": {
       "ignore": [
-        "DigitalCraftsman\\Ids\\Doctrine\\IdListType::convertToPHPValue"
+        "BuronDigital\\Ids\\Doctrine\\IdListType::convertToPHPValue"
       ]
     },
     "DecrementInteger": {
       "ignore": [
-        "DigitalCraftsman\\Ids\\Doctrine\\IdListType::convertToPHPValue"
+        "BuronDigital\\Ids\\Doctrine\\IdListType::convertToPHPValue"
       ]
     }
   },

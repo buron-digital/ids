@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace DigitalCraftsman\Ids\ValueObject;
+namespace BuronDigital\Ids\ValueObject;
 
-use DigitalCraftsman\SelfAwareNormalizers\Serializer\ArrayNormalizable;
-use DigitalCraftsman\SelfAwareNormalizers\Serializer\NullableArrayDenormalizable;
-use DigitalCraftsman\SelfAwareNormalizers\Serializer\NullableArrayDenormalizableTrait;
+use BuronDigital\SelfAwareNormalizers\Serializer\ArrayNormalizable;
+use BuronDigital\SelfAwareNormalizers\Serializer\NullableArrayDenormalizable;
+use BuronDigital\SelfAwareNormalizers\Serializer\NullableArrayDenormalizableTrait;
 
 /**
  * @template T extends Id

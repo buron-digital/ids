@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace DigitalCraftsman\Ids\Doctrine;
+namespace BuronDigital\Ids\Doctrine;
 
-use DigitalCraftsman\Ids\Test\Doctrine\UserIdListType;
-use DigitalCraftsman\Ids\Test\ValueObject\UserId;
-use DigitalCraftsman\Ids\Test\ValueObject\UserIdList;
+use BuronDigital\Ids\Test\Doctrine\UserIdListType;
+use BuronDigital\Ids\Test\ValueObject\UserId;
+use BuronDigital\Ids\Test\ValueObject\UserIdList;
 use Doctrine\DBAL\ArrayParameterType;
 use Doctrine\DBAL\Cache\QueryCacheProfile;
 use Doctrine\DBAL\DriverManager;

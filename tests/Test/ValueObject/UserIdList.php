@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace DigitalCraftsman\Ids\Test\ValueObject;
+namespace BuronDigital\Ids\Test\ValueObject;
 
-use DigitalCraftsman\Ids\ValueObject\IdList;
+use BuronDigital\Ids\ValueObject\IdList;
 
 /**
  * @extends IdList<UserId>
